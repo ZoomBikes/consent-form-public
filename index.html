@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consentimiento Informado - La Manuela Tattoo</title>
+    <title>Consentimiento Informado para Tatuajes - La Manuela Tattoo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { 
@@ -25,43 +25,80 @@
         }
         .hidden { display: none; }
         .show { display: block; }
+        .consent-text {
+            font-size: 0.875rem;
+            line-height: 1.5;
+            text-align: justify;
+        }
     </style>
 </head>
 <body>
     <div class="min-h-screen py-8 px-4">
-        <div class="max-w-4xl mx-auto">
+        <div class="max-w-5xl mx-auto">
             <!-- Header -->
             <div class="glass p-6 rounded-2xl mb-6 text-center">
-                <h1 class="text-3xl font-bold text-white mb-2">Consentimiento Informado</h1>
-                <p class="text-gray-300">Cita de Tatuaje - La Manuela Tattoo</p>
-                <p class="text-gray-300">Artista: Profesional</p>
+                <h1 class="text-3xl font-bold text-white mb-2">CONSENTIMIENTO INFORMADO PARA TATUAJES</h1>
+                <p class="text-gray-300 text-lg">La Manuela Tattoo - Estudio de Tatuajes Profesional</p>
+                <p class="text-gray-300">Fecha: <span id="current-date"></span></p>
+            </div>
+
+            <!-- Información del Consentimiento -->
+            <div class="glass p-6 rounded-2xl mb-6">
+                <h2 class="text-xl font-semibold text-white mb-4">INFORMACIÓN PREVIA</h2>
+                <div class="consent-text text-gray-300 space-y-4">
+                    <p><strong>1. NATURALEZA DEL PROCEDIMIENTO:</strong> Un tatuaje es un procedimiento que consiste en la introducción de pigmentos en la dermis mediante agujas, creando un diseño permanente en la piel.</p>
+                    
+                    <p><strong>2. RIESGOS Y COMPLICACIONES:</strong> Aunque el tatuaje es generalmente seguro cuando se realiza en condiciones higiénicas adecuadas, pueden ocurrir las siguientes complicaciones:</p>
+                    <ul class="list-disc list-inside ml-4 space-y-2">
+                        <li>Infecciones bacterianas (estafilococos, estreptococos)</li>
+                        <li>Infecciones víricas (hepatitis B, C, VIH)</li>
+                        <li>Reacciones alérgicas a los pigmentos</li>
+                        <li>Formación de queloides o cicatrices</li>
+                        <li>Decoloración o cambios en el color del tatuaje</li>
+                        <li>Reacciones granulomatosas</li>
+                        <li>Dermatitis de contacto</li>
+                        <li>Problemas durante resonancias magnéticas</li>
+                    </ul>
+                    
+                    <p><strong>3. CUIDADOS POSTERIORES:</strong> Es fundamental seguir las instrucciones de cuidado para evitar complicaciones y obtener el mejor resultado.</p>
+                    
+                    <p><strong>4. ALTERNATIVAS:</strong> Existen alternativas como tatuajes temporales, henna, o no realizarse el tatuaje.</p>
+                </div>
             </div>
 
             <!-- Form -->
             <form id="consent-form" class="space-y-6">
-                <!-- Personal Information -->
+                <!-- Datos del Cliente -->
                 <div class="glass p-6 rounded-2xl">
-                    <h2 class="text-xl font-semibold text-white mb-4">Información Personal</h2>
+                    <h2 class="text-xl font-semibold text-white mb-4">DATOS DEL CLIENTE</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Nombre completo *</label>
-                            <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Apellidos y Nombre *</label>
+                            <input type="text" name="fullName" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Email *</label>
-                            <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <label class="block text-sm font-medium text-gray-300 mb-2">DNI/NIE/Pasaporte *</label>
+                            <input type="text" name="dni" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Teléfono</label>
-                            <input type="tel" name="phone" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Fecha de nacimiento *</label>
+                            <input type="date" name="birthDate" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Fecha de nacimiento</label>
-                            <input type="date" name="birthDate" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Edad *</label>
+                            <input type="number" name="age" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Teléfono de contacto *</label>
+                            <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                            <input type="email" name="email" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
                         </div>
                         <div class="md:col-span-2">
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Dirección</label>
-                            <input type="text" name="address" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Dirección completa *</label>
+                            <input type="text" name="address" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
                         </div>
                     </div>
                 </div>
@@ -81,41 +118,148 @@
                     </div>
                 </div>
 
-                <!-- Medical Information -->
+                <!-- Información Médica -->
                 <div class="glass p-6 rounded-2xl">
-                    <h2 class="text-xl font-semibold text-white mb-4">Información Médica</h2>
+                    <h2 class="text-xl font-semibold text-white mb-4">INFORMACIÓN MÉDICA</h2>
                     <div class="space-y-4">
                         <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Información médica relevante</label>
-                            <textarea name="medicalInfo" rows="3" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">¿Padece alguna enfermedad? (especificar)</label>
+                            <textarea name="diseases" rows="2" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Ej: Diabetes, hipertensión, etc."></textarea>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Alergias</label>
-                            <input type="text" name="allergies" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <label class="block text-sm font-medium text-gray-300 mb-2">¿Toma algún medicamento? (especificar)</label>
+                            <textarea name="medications" rows="2" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Ej: Anticoagulantes, insulina, etc."></textarea>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Medicamentos actuales</label>
-                            <input type="text" name="medications" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <label class="block text-sm font-medium text-gray-300 mb-2">¿Es alérgico a algún medicamento o sustancia? (especificar)</label>
+                            <textarea name="allergies" rows="2" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Ej: Penicilina, látex, etc."></textarea>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Condiciones de la piel</label>
-                            <input type="text" name="skinConditions" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <label class="block text-sm font-medium text-gray-300 mb-2">¿Tiene problemas de coagulación o hemorragias?</label>
+                            <div class="flex space-x-4">
+                                <label class="flex items-center">
+                                    <input type="radio" name="bleedingProblems" value="si" class="mr-2">
+                                    <span class="text-gray-300">Sí</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="bleedingProblems" value="no" class="mr-2">
+                                    <span class="text-gray-300">No</span>
+                                </label>
+                            </div>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Tatuajes previos</label>
-                            <input type="text" name="previousTattoos" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <label class="block text-sm font-medium text-gray-300 mb-2">¿Tiene problemas de cicatrización?</label>
+                            <div class="flex space-x-4">
+                                <label class="flex items-center">
+                                    <input type="radio" name="healingProblems" value="si" class="mr-2">
+                                    <span class="text-gray-300">Sí</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="healingProblems" value="no" class="mr-2">
+                                    <span class="text-gray-300">No</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">¿Tiene tatuajes previos?</label>
+                            <div class="flex space-x-4">
+                                <label class="flex items-center">
+                                    <input type="radio" name="previousTattoos" value="si" class="mr-2">
+                                    <span class="text-gray-300">Sí</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="previousTattoos" value="no" class="mr-2">
+                                    <span class="text-gray-300">No</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">¿Está embarazada o en período de lactancia?</label>
+                            <div class="flex space-x-4">
+                                <label class="flex items-center">
+                                    <input type="radio" name="pregnancy" value="si" class="mr-2">
+                                    <span class="text-gray-300">Sí</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="pregnancy" value="no" class="mr-2">
+                                    <span class="text-gray-300">No</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="pregnancy" value="na" class="mr-2">
+                                    <span class="text-gray-300">No aplica</span>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Digital Signature -->
+                <!-- Información del Tatuaje -->
                 <div class="glass p-6 rounded-2xl">
-                    <h2 class="text-xl font-semibold text-white mb-4">Firma Digital</h2>
+                    <h2 class="text-xl font-semibold text-white mb-4">INFORMACIÓN DEL TATUAJE</h2>
                     <div class="space-y-4">
-                        <canvas id="signatureCanvas" width="100%" height="200"></canvas>
-                        <div class="flex gap-2">
-                            <button type="button" id="clear-signature" class="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors">Limpiar</button>
-                            <p class="text-sm text-gray-300 flex-1">Firma en el área de arriba para completar el consentimiento</p>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Descripción del tatuaje a realizar *</label>
+                            <textarea name="tattooDescription" required rows="3" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Describa el diseño, tamaño, ubicación, colores, etc."></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Ubicación en el cuerpo *</label>
+                            <input type="text" name="tattooLocation" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Ej: Brazo derecho, espalda, etc.">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Tamaño aproximado (cm) *</label>
+                            <input type="text" name="tattooSize" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Ej: 10x15 cm">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Declaración de Consentimiento -->
+                <div class="glass p-6 rounded-2xl">
+                    <h2 class="text-xl font-semibold text-white mb-4">DECLARACIÓN DE CONSENTIMIENTO</h2>
+                    <div class="consent-text text-gray-300 space-y-4">
+                        <p>He leído y comprendido la información proporcionada sobre el procedimiento de tatuaje, sus riesgos, complicaciones y cuidados posteriores.</p>
+                        
+                        <p>Declaro que:</p>
+                        <ul class="list-disc list-inside ml-4 space-y-2">
+                            <li>He proporcionado información veraz sobre mi estado de salud</li>
+                            <li>No padezco ninguna contraindicación médica para la realización del tatuaje</li>
+                            <li>Comprendo que el tatuaje es permanente y que su eliminación puede ser costosa y dolorosa</li>
+                            <li>He sido informado de los cuidados posteriores necesarios</li>
+                            <li>Comprendo que pueden surgir complicaciones a pesar de seguir todas las precauciones</li>
+                        </ul>
+                        
+                        <div class="mt-6">
+                            <label class="flex items-start space-x-3">
+                                <input type="checkbox" name="consentGiven" required class="mt-1">
+                                <span class="text-gray-300">Doy mi consentimiento informado para la realización del tatuaje descrito, habiendo sido informado de todos los aspectos del procedimiento.</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Firmas -->
+                <div class="glass p-6 rounded-2xl">
+                    <h2 class="text-xl font-semibold text-white mb-4">FIRMAS</h2>
+                    <div class="space-y-6">
+                        <!-- Firma del Cliente -->
+                        <div>
+                            <h3 class="text-lg font-medium text-white mb-3">Firma del Cliente</h3>
+                            <canvas id="signatureCanvas" width="100%" height="200"></canvas>
+                            <div class="flex gap-2 mt-2">
+                                <button type="button" id="clear-signature" class="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors">Limpiar Firma</button>
+                                <p class="text-sm text-gray-300 flex-1">Firme en el área de arriba para completar el consentimiento</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Información del Tatuador -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Nombre del Tatuador *</label>
+                                <input type="text" name="tattooArtist" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Número de Colegiado/Registro *</label>
+                                <input type="text" name="artistLicense" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -201,12 +345,23 @@
         // Update submit button state
         function updateSubmitButton() {
             const submitBtn = document.getElementById('submit-btn');
-            if (signature) {
+            const consentCheckbox = document.querySelector('input[name="consentGiven"]');
+            const isConsentChecked = consentCheckbox ? consentCheckbox.checked : false;
+            
+            if (signature && isConsentChecked) {
                 submitBtn.className = 'w-full px-8 py-4 rounded-lg font-semibold text-lg transition-colors bg-purple-600 hover:bg-purple-700 text-white';
                 submitBtn.disabled = false;
             } else {
                 submitBtn.className = 'w-full px-8 py-4 rounded-lg font-semibold text-lg transition-colors bg-gray-600 cursor-not-allowed text-gray-400';
                 submitBtn.disabled = true;
+            }
+        }
+
+        // Add event listener for consent checkbox
+        function initConsentCheckbox() {
+            const consentCheckbox = document.querySelector('input[name="consentGiven"]');
+            if (consentCheckbox) {
+                consentCheckbox.addEventListener('change', updateSubmitButton);
             }
         }
 
@@ -267,9 +422,46 @@
             }
         }
 
+        // Set current date
+        function setCurrentDate() {
+            const now = new Date();
+            const dateString = now.toLocaleDateString('es-ES', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            document.getElementById('current-date').textContent = dateString;
+        }
+
+        // Auto-calculate age from birth date
+        function calculateAge() {
+            const birthDate = document.querySelector('input[name="birthDate"]');
+            const ageInput = document.querySelector('input[name="age"]');
+            
+            if (birthDate && ageInput) {
+                birthDate.addEventListener('change', function() {
+                    if (this.value) {
+                        const today = new Date();
+                        const birth = new Date(this.value);
+                        let age = today.getFullYear() - birth.getFullYear();
+                        const monthDiff = today.getMonth() - birth.getMonth();
+                        
+                        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+                            age--;
+                        }
+                        
+                        ageInput.value = age;
+                    }
+                });
+            }
+        }
+
         // Initialize the form
         document.addEventListener('DOMContentLoaded', function() {
+            setCurrentDate();
             initSignature();
+            calculateAge();
+            initConsentCheckbox();
             document.getElementById('consent-form').addEventListener('submit', handleSubmit);
         });
     </script>
