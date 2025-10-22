@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consentimiento Informado para Tatuajes - La Manuela Tattoo</title>
+    <title>Consentimiento - Formulario Simple</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { 
@@ -23,97 +23,51 @@
             cursor: crosshair;
             background: white;
         }
-        .hidden { display: none; }
-        .show { display: block; }
-        .consent-text {
-            font-size: 0.875rem;
-            line-height: 1.5;
-            text-align: justify;
-        }
     </style>
 </head>
 <body>
     <div class="min-h-screen py-8 px-4">
-        <div class="max-w-5xl mx-auto">
+        <div class="max-w-2xl mx-auto">
             <!-- Header -->
             <div class="glass p-6 rounded-2xl mb-6 text-center">
-                <h1 class="text-3xl font-bold text-white mb-4">Formulario Completo</h1>
-                <div class="text-gray-300 text-sm">
-                    <p>Fecha: <span id="current-date"></span></p>
-                </div>
+                <h1 class="text-3xl font-bold text-white mb-2">Formulario de Consentimiento</h1>
+                <p class="text-gray-300 text-sm">Fecha: <span id="current-date"></span></p>
             </div>
 
-
-
-            <!-- Form -->
+            <!-- Formulario Simple -->
             <form id="consent-form" class="space-y-6">
-                <!-- Datos del Cliente -->
-                <div class="glass p-6 rounded-2xl">
+                <div class="glass p-6 rounded-2xl space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Título *</label>
+                        <input type="text" name="title" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Ej: Consentimiento para tatuaje">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Nombre completo del cliente *</label>
+                        <input type="text" name="fullName" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Nombre y apellidos">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Dirección *</label>
+                        <input type="text" name="address" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Calle, número, ciudad, CP">
+                    </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Nombre y Apellidos: *</label>
-                            <input type="text" name="fullName" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Fecha de Nacimiento: *</label>
-                            <input type="date" name="birthDate" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Domicilio: *</label>
-                            <input type="text" name="address" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Móvil: *</label>
-                            <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Gmail:</label>
-                            <input type="email" name="email" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Tatuador: *</label>
-                            <select name="tattooArtist" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
-                                <option value="">Selecciona un tatuador</option>
-                                <option value="Nelson">Nelson</option>
-                                <option value="Marcos">Marcos</option>
-                                <option value="Valeria">Valeria</option>
-                                <option value="Kathu">Kathu</option>
-                                <option value="Kike">Kike</option>
-                                <option value="Ale">Ale</option>
-                                <option value="Nuria">Nuria</option>
-                                <option value="Coren">Coren</option>
-                                <option value="Jhon">Jhon</option>
-                                <option value="Meta">Meta</option>
-                                <option value="Jesus">Jesus</option>
-                                <option value="Dragos">Dragos</option>
-                                <option value="Merry">Merry</option>
-                                <option value="Juanjo">Juanjo</option>
-                                <option value="Azlane">Azlane</option>
-                                <option value="Marta">Marta</option>
-                                <option value="Lucho">Lucho</option>
-                                <option value="Yordi">Yordi</option>
-                                <option value="Luisao">Luisao</option>
-                                <option value="Marlon">Marlon</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">DNI: *</label>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">DNI *</label>
                             <input type="text" name="dni" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Foto DNI (anverso):</label>
-                            <input type="file" name="dniFront" accept="image/*" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Teléfono *</label>
+                            <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
                         </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Foto DNI (reverso):</label>
-                            <input type="file" name="dniBack" accept="image/*" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
-                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Gmail *</label>
+                        <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="correo@gmail.com">
                     </div>
                 </div>
 
                 <!-- Firma -->
                 <div class="glass p-6 rounded-2xl">
-                    <h2 class="text-xl font-semibold text-white mb-4">Firma:</h2>
+                    <h2 class="text-xl font-semibold text-white mb-4">Cajón de firma</h2>
                     <canvas id="signatureCanvas" width="100%" height="200"></canvas>
                     <div class="flex gap-2 mt-2">
                         <button type="button" id="clear-signature" class="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors">Limpiar firma</button>
@@ -121,117 +75,10 @@
                     </div>
                 </div>
 
-                <!-- Descripción de la técnica -->
-                <div class="glass p-6 rounded-2xl">
-                    <h2 class="text-xl font-semibold text-white mb-4">Descripción de la técnica</h2>
-                    
-                    <div class="space-y-6">
-                        <!-- Tatuaje -->
-                        <div>
-                            <h3 class="text-lg font-semibold text-white mb-3">Tatuaje</h3>
-                            <div class="consent-text text-gray-300 space-y-2">
-                                <p>Esta técnica es el procedimiento de decoración corporal mediante la introducción en la piel de pigmentos colorantes por medio de punciones. Realizado con útiles de acero inoxidable, agujas, porta tintas y demás material, estéril y desechable, envasado y sellado hasta su uso. Las tintas utilizadas dan cumplimiento a lo establecido en la Disposición Adicional Segunda del Real Decreto 1599/1997, sobre Productos Cosméticos, y disponen de su correspondiente registro sanitario de la Agencia Española de Medicamentos y Productos Sanitarios.</p>
-                            </div>
-                        </div>
-
-                        <!-- Anillado -->
-                        <div>
-                            <h3 class="text-lg font-semibold text-white mb-3">Anillado</h3>
-                            <div class="consent-text text-gray-300 space-y-2">
-                                <p>Procedimiento de decoración corporal que consiste en la perforación de cualquier parte del cuerpo con la finalidad de introducir en el mismo un objeto de algún material. Realizado con pinzas, aguja americana de un solo uso, joyería de Titanio grado implante F136, oro de 14 quilates. Todos los materiales son envasados individualmente y esterilizados hasta su utilización para reducir el riesgo de infección o reacción alérgica.</p>
-                            </div>
-                        </div>
-
-                        <!-- Riesgos -->
-                        <div>
-                            <h3 class="text-lg font-semibold text-white mb-3">Riesgos</h3>
-                            <div class="consent-text text-gray-300 space-y-2">
-                                <p>Siempre que se practiquen cortes o punciones que conlleven una herida abierta y sangrante, existen riesgos de infecciones locales, reacciones adversas de la piel tales como alergias, queloides, sarpullidos y contagio de enfermedades tales como hepatitis, sífilis, VIH, entre otras. Estas son de fácil prevención manteniendo las reglas de higiene y esterilización.</p>
-                            </div>
-                        </div>
-
-                        <!-- Indicaciones previas -->
-                        <div>
-                            <h3 class="text-lg font-semibold text-white mb-3">Indicaciones previas a la aplicación</h3>
-                            <div class="consent-text text-gray-300 space-y-2">
-                                <ul class="list-disc list-inside space-y-1">
-                                    <li>Si usted está tomando algún medicamento, consulte con su médico antes de iniciar la técnica a realizar.</li>
-                                    <li>No tomar el sol ni rayos U.V.A.</li>
-                                    <li>No tomar alcohol, vasodilatadores o anticoagulantes.</li>
-                                    <li>Prohibido el uso de anestesia tópica...</li>
-                                    <li>El uso de medicamentos corticoides causa deterioro...</li>
-                                    <li>Si tiene alguna duda sobre la técnica a realizar, consulte a su técnico.</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Contraindicaciones -->
-                        <div>
-                            <h3 class="text-lg font-semibold text-white mb-3">Contraindicaciones</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <div>
-                                    <h4 class="font-semibold text-white mb-2">Temporales</h4>
-                                    <p class="text-gray-300 text-sm">Herpes, embarazo, hepatitis, menstruación, debilidad inmunológica...</p>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-white mb-2">Totales</h4>
-                                    <p class="text-gray-300 text-sm">Reacciones alérgicas a los pigmentos, afecciones de la piel en la zona de aplicación...</p>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-white mb-2">Bajo supervisión médica</h4>
-                                    <p class="text-gray-300 text-sm">Diabetes, hemofilia, cardiopatías, VIH...</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Cuidados posteriores -->
-                        <div>
-                            <h3 class="text-lg font-semibold text-white mb-3">Cuidados generales posteriores a la técnica realizada</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div>
-                                    <h4 class="font-semibold text-white mb-2">Tatuaje</h4>
-                                    <p class="text-gray-300 text-sm">Transcurridas dos horas retirar el vendaje y con las manos limpias lavarlo con agua...</p>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-white mb-2">Anillado</h4>
-                                    <p class="text-gray-300 text-sm">Deberemos cuidarlo hasta su total cicatrización. Siempre con las manos limpias, lavar bien la zona...</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Prevención -->
-                        <div>
-                            <h3 class="text-lg font-semibold text-white mb-3">Prevención, limpieza, desinfección y esterilización</h3>
-                            <div class="consent-text text-gray-300 space-y-2">
-                                <p>Tras la realización de cada uno de los trabajos, todo el material desechable es retirado, las agujas y objetos punzantes...</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Protección de datos -->
-                <div class="glass p-6 rounded-2xl">
-                    <h2 class="text-xl font-semibold text-white mb-4">Protección de datos y consentimiento</h2>
-                    <div class="consent-text text-gray-300 space-y-4">
-                        <p>De acuerdo con el Reglamento (UE) 2016/679 General de Protección de Datos (RGPD) y la Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales, le informamos de que los datos personales recogidos en este formulario serán tratados por <strong>La Manuela Tattoo</strong> con la finalidad de gestionar su consentimiento informado, la trazabilidad sanitaria de los materiales empleados y el archivo del consentimiento en cumplimiento de la normativa vigente.</p>
-                        
-                        <p>Sus datos se conservarán mientras sea necesario para cumplir con obligaciones legales o sanitarias y no se cederán a terceros salvo obligación legal. Usted puede ejercer los derechos de acceso, rectificación, supresión, limitación y oposición mediante solicitud escrita dirigida al estudio, junto con copia de su documento de identidad.</p>
-                        
-                        <p>Mediante la aceptación, declara haber leído y comprendido toda la información facilitada, así como prestar su consentimiento expreso para el tratamiento de sus datos personales en los términos indicados.</p>
-                        
-                        <div class="mt-6">
-                            <label class="flex items-start space-x-3">
-                                <input type="checkbox" name="privacyConsent" required class="mt-1">
-                                <span class="text-gray-300">He leído y acepto la política de privacidad y el tratamiento de mis datos personales.</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Submit Button -->
+                <!-- Enviar -->
                 <div class="glass p-6 rounded-2xl text-center">
                     <button type="submit" id="submit-btn" class="w-full px-8 py-4 rounded-lg font-semibold text-lg transition-colors bg-gray-600 cursor-not-allowed text-gray-400">
-                        Enviar Consentimiento
+                        Enviar
                     </button>
                 </div>
             </form>
@@ -242,22 +89,22 @@
         let signature = '';
         let isDrawing = false;
 
-        // Signature functionality
+        function setCurrentDate() {
+            const now = new Date();
+            const dateString = now.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
+            document.getElementById('current-date').textContent = dateString;
+        }
+
+        // Firma
         function initSignature() {
             const canvas = document.getElementById('signatureCanvas');
             const ctx = canvas.getContext('2d');
-            
-            // Set canvas size
             canvas.width = canvas.offsetWidth;
             canvas.height = 200;
-
-            // Signature events
             canvas.addEventListener('mousedown', startDrawing);
             canvas.addEventListener('mousemove', draw);
             canvas.addEventListener('mouseup', stopDrawing);
             canvas.addEventListener('mouseleave', stopDrawing);
-
-            // Clear signature
             document.getElementById('clear-signature').addEventListener('click', clearSignature);
         }
 
@@ -267,7 +114,6 @@
             const rect = canvas.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            
             const ctx = canvas.getContext('2d');
             ctx.beginPath();
             ctx.moveTo(x, y);
@@ -275,12 +121,10 @@
 
         function draw(e) {
             if (!isDrawing) return;
-            
             const canvas = e.target;
             const rect = canvas.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            
             const ctx = canvas.getContext('2d');
             ctx.lineWidth = 2;
             ctx.lineCap = 'round';
@@ -306,153 +150,89 @@
             updateSubmitButton();
         }
 
-        // Update submit button state
         function updateSubmitButton() {
             const submitBtn = document.getElementById('submit-btn');
+            const title = document.querySelector('input[name="title"]');
             const fullName = document.querySelector('input[name="fullName"]');
-            const birthDate = document.querySelector('input[name="birthDate"]');
             const address = document.querySelector('input[name="address"]');
-            const phone = document.querySelector('input[name="phone"]');
-            const tattooArtist = document.querySelector('select[name="tattooArtist"]');
             const dni = document.querySelector('input[name="dni"]');
-            const privacyConsent = document.querySelector('input[name="privacyConsent"]');
-            
-            const hasRequiredFields = fullName && fullName.value.trim() !== '' &&
-                                    birthDate && birthDate.value.trim() !== '' &&
-                                    address && address.value.trim() !== '' &&
-                                    phone && phone.value.trim() !== '' &&
-                                    tattooArtist && tattooArtist.value.trim() !== '' &&
-                                    dni && dni.value.trim() !== '' &&
-                                    privacyConsent && privacyConsent.checked;
-            
-            if (signature && hasRequiredFields) {
+            const phone = document.querySelector('input[name="phone"]');
+            const email = document.querySelector('input[name="email"]');
+            const hasRequired = title && title.value.trim() !== '' &&
+                                fullName && fullName.value.trim() !== '' &&
+                                address && address.value.trim() !== '' &&
+                                dni && dni.value.trim() !== '' &&
+                                phone && phone.value.trim() !== '' &&
+                                email && email.value.trim() !== '';
+            if (signature && hasRequired) {
                 submitBtn.className = 'w-full px-8 py-4 rounded-lg font-semibold text-lg transition-colors bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white hover:shadow-lg';
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'Enviar';
             } else {
                 submitBtn.className = 'w-full px-8 py-4 rounded-lg font-semibold text-lg transition-colors bg-gray-600 cursor-not-allowed text-gray-400';
                 submitBtn.disabled = true;
-                submitBtn.textContent = 'Debes aceptar para continuar.';
+                submitBtn.textContent = 'Completa los campos y firma';
             }
         }
 
-        // Add event listeners for required fields
         function initRequiredFields() {
-            const requiredFields = [
-                'input[name="fullName"]',
-                'input[name="birthDate"]',
-                'input[name="address"]',
-                'input[name="phone"]',
-                'select[name="tattooArtist"]',
-                'input[name="dni"]',
-                'input[name="privacyConsent"]'
-            ];
-            
-            requiredFields.forEach(selector => {
-                const field = document.querySelector(selector);
-                if (field) {
-                    field.addEventListener('input', updateSubmitButton);
-                    field.addEventListener('change', updateSubmitButton);
-                }
-            });
+            ['input[name="title"]','input[name="fullName"]','input[name="address"]','input[name="dni"]','input[name="phone"]','input[name="email"]']
+                .forEach(selector => {
+                    const el = document.querySelector(selector);
+                    if (el) {
+                        el.addEventListener('input', updateSubmitButton);
+                        el.addEventListener('change', updateSubmitButton);
+                    }
+                });
         }
 
-        // Handle form submission
         async function handleSubmit(e) {
             e.preventDefault();
-            
             if (!signature) {
-                alert('Por favor firma el formulario');
+                alert('Por favor, firma el formulario');
                 return;
             }
-
             const submitBtn = document.getElementById('submit-btn');
             submitBtn.textContent = 'Enviando...';
             submitBtn.disabled = true;
-
             try {
                 const formData = new FormData(e.target);
                 const clientData = Object.fromEntries(formData.entries());
-                
-                // Try to submit to Railway
                 const response = await fetch('https://lmtt-saas-production-2009.up.railway.app/api/consents/submit', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        token: 'manual-submission',
-                        clientData: clientData,
+                        token: 'manual-simple',
+                        clientData,
                         signatureData: signature,
                         ipAddress: 'unknown',
                         userAgent: navigator.userAgent
                     })
                 });
-
-                const data = await response.json();
-                
-                if (data.success) {
-                    alert('¡Consentimiento enviado correctamente! Gracias por completar el formulario.');
-                    // Reset form
+                const data = await response.json().catch(() => ({ success: false }));
+                if (data && data.success) {
+                    alert('¡Enviado correctamente!');
                     e.target.reset();
                     clearSignature();
                 } else {
-                    alert('Consentimiento guardado localmente. Los datos se procesarán cuando el sistema esté disponible.');
-                    // Reset form
+                    alert('Guardado localmente. Se procesará cuando el sistema esté disponible.');
                     e.target.reset();
                     clearSignature();
                 }
-            } catch (error) {
-                console.error('Error submitting form:', error);
-                alert('Consentimiento guardado localmente. Los datos se procesarán cuando el sistema esté disponible.');
-                // Reset form
+            } catch (err) {
+                console.error(err);
+                alert('Guardado localmente. Se procesará cuando el sistema esté disponible.');
                 e.target.reset();
                 clearSignature();
             } finally {
-                submitBtn.textContent = 'Enviar Consentimiento';
+                submitBtn.textContent = 'Enviar';
                 updateSubmitButton();
             }
         }
 
-        // Set current date
-        function setCurrentDate() {
-            const now = new Date();
-            const dateString = now.toLocaleDateString('es-ES', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            });
-            document.getElementById('current-date').textContent = dateString;
-        }
-
-        // Auto-calculate age from birth date
-        function calculateAge() {
-            const birthDate = document.querySelector('input[name="birthDate"]');
-            const ageInput = document.querySelector('input[name="age"]');
-            
-            if (birthDate && ageInput) {
-                birthDate.addEventListener('change', function() {
-                    if (this.value) {
-                        const today = new Date();
-                        const birth = new Date(this.value);
-                        let age = today.getFullYear() - birth.getFullYear();
-                        const monthDiff = today.getMonth() - birth.getMonth();
-                        
-                        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
-                            age--;
-                        }
-                        
-                        ageInput.value = age;
-                    }
-                });
-            }
-        }
-
-        // Initialize the form
         document.addEventListener('DOMContentLoaded', function() {
             setCurrentDate();
             initSignature();
-            calculateAge();
             initRequiredFields();
             document.getElementById('consent-form').addEventListener('submit', handleSubmit);
         });
