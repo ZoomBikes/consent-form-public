@@ -37,32 +37,150 @@
         <div class="max-w-5xl mx-auto">
             <!-- Header -->
             <div class="glass p-6 rounded-2xl mb-6 text-center">
-                <h1 class="text-3xl font-bold text-white mb-2">CONSENTIMIENTO INFORMADO PARA TATUAJES</h1>
-                <p class="text-gray-300 text-lg">La Manuela Tattoo - Estudio de Tatuajes Profesional</p>
-                <p class="text-gray-300">Fecha: <span id="current-date"></span></p>
+                <h1 class="text-3xl font-bold text-white mb-4">CONSENTIMIENTO INFORMADO TATUAJE</h1>
+                <p class="text-gray-300 text-sm mb-2">(*) Según Anexo 3 del Decreto 35/2005, de 10 de marzo, de Consejo de Gobierno, por el que se regulan las prácticas de tatuaje, micropigmentación, perforación cutánea ("piercing") u otras similares de adorno corporal.</p>
+                <div class="text-gray-300 text-sm">
+                    <p>Fecha: <span id="current-date"></span></p>
+                </div>
+            </div>
+
+            <!-- Datos del Establecimiento -->
+            <div class="glass p-6 rounded-2xl mb-6">
+                <h2 class="text-xl font-semibold text-white mb-4">DATOS DEL ESTABLECIMIENTO</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Nombre/Razón Social *</label>
+                        <input type="text" name="businessName" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" value="La Manuela Tattoo">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">NIF *</label>
+                        <input type="text" name="businessNIF" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Nº REAC (Opcional)</label>
+                        <input type="text" name="reacNumber" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Dirección *</label>
+                        <input type="text" name="businessAddress" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Localidad (CP) *</label>
+                        <input type="text" name="businessCity" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Teléfono *</label>
+                        <input type="tel" name="businessPhone" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Datos del Aplicador -->
+            <div class="glass p-6 rounded-2xl mb-6">
+                <h2 class="text-xl font-semibold text-white mb-4">DATOS DEL/DE LA APLICADOR/A</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Nombre y Apellidos *</label>
+                        <input type="text" name="applicatorName" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">DNI *</label>
+                        <input type="text" name="applicatorDNI" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Titulación Académica/Categoría Profesional *</label>
+                        <input type="text" name="applicatorQualification" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    </div>
+                </div>
             </div>
 
             <!-- Información del Consentimiento -->
             <div class="glass p-6 rounded-2xl mb-6">
-                <h2 class="text-xl font-semibold text-white mb-4">INFORMACIÓN PREVIA</h2>
+                <h2 class="text-xl font-semibold text-white mb-4">RIESGOS Y COMPLICACIONES QUE SE PUEDAN DERIVAR</h2>
                 <div class="consent-text text-gray-300 space-y-4">
-                    <p><strong>1. NATURALEZA DEL PROCEDIMIENTO:</strong> Un tatuaje es un procedimiento que consiste en la introducción de pigmentos en la dermis mediante agujas, creando un diseño permanente en la piel.</p>
+                    <p>Como cualquier técnica invasiva, conlleva riesgo de complicaciones que varían de leves a graves.</p>
+                    <p>Todo el material utilizado se encuentra esterilizado, es de un solo uso y desechable.</p>
+                    <p>El desprecintado de todo el material y su posterior eliminación se realizará en presencia del cliente.</p>
                     
-                    <p><strong>2. RIESGOS Y COMPLICACIONES:</strong> Aunque el tatuaje es generalmente seguro cuando se realiza en condiciones higiénicas adecuadas, pueden ocurrir las siguientes complicaciones:</p>
-                    <ul class="list-disc list-inside ml-4 space-y-2">
-                        <li>Infecciones bacterianas (estafilococos, estreptococos)</li>
-                        <li>Infecciones víricas (hepatitis B, C, VIH)</li>
-                        <li>Reacciones alérgicas a los pigmentos</li>
-                        <li>Formación de queloides o cicatrices</li>
-                        <li>Decoloración o cambios en el color del tatuaje</li>
-                        <li>Reacciones granulomatosas</li>
-                        <li>Dermatitis de contacto</li>
-                        <li>Problemas durante resonancias magnéticas</li>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="font-semibold text-white mb-2">Riesgos frecuentes:</h3>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Enrojecimiento de la zona de aplicación</li>
+                                <li>Inflamación y sangrado durante el proceso de tatuaje y posterior</li>
+                                <li>Dolor en la zona de aplicación, de leve a significativo, en función de la zona tatuada</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-white mb-2">Riesgos poco frecuentes:</h3>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Reacciones alérgicas a pigmentos de la tinta</li>
+                                <li>Cicatriz hipertrófica (queloides)</li>
+                                <li>Granulomas en la zona de aplicación</li>
+                                <li>Infecciones de la piel</li>
+                                <li>Contagio de enfermedades transmitidas por la sangre</li>
+                                <li>Exposición a largo plazo a las sustancias químicas y sus productos de degradación</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-yellow-900/20 p-4 rounded-lg">
+                        <h3 class="font-semibold text-yellow-300 mb-2">Recomendaciones previas:</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>Si padece alguna enfermedad o está tomando algún medicamento, en especial vasodilatadores o anticoagulantes, consulte con su médico antes de iniciar la técnica</li>
+                            <li>En los días previos, no tome el sol ni rayos UVA, en la zona que va a ser tatuada</li>
+                            <li>No tome alcohol, bebidas excitantes (café, té, refrescos con cafeína, taurina, teína) o sustancias con componentes excitantes, así como marisco, comidas picantes y/o copiosas antes de realización de la técnica</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cuidados Posteriores -->
+            <div class="glass p-6 rounded-2xl mb-6">
+                <h2 class="text-xl font-semibold text-white mb-4">CUIDADOS GENERALES POSTERIORES A LA APLICACIÓN DE TATUAJE</h2>
+                <div class="consent-text text-gray-300 space-y-4">
+                    <p>La práctica del tatuaje produce pequeñas heridas sobre la piel y deben tratarse como tal.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Limpie la zona suavemente con agua y jabón con pH neutro dos/tres veces al día</li>
+                        <li>Aplique frío seco (tiempo máximo cinco minutos) si existe inflamación los primeros días</li>
+                        <li>Evite el contacto con medicamentos tópicos, alcoholes, cosméticos (cremas, maquillajes, etc) y polvo</li>
+                        <li>Mantenga seca la zona evitando el exceso de sudor, el tiempo bajo la ducha, sauna, piscina y/o playa</li>
+                        <li>Evite agresiones sobre la zona como roces, golpes o cualquier acción que pueda dañar o irritar la piel donde se ha realizado el tatuaje, así como rascar, frotar o quitar la costra de la zona tatuada</li>
+                        <li>Evite tomar sol y/o rayos UVA durante dos meses posteriores al tratamiento. Esta exposición puede variar el color del pigmento aplicado. En caso de que haya exposición solar debe utilizar protector solar (pantalla total) en la zona del tatuaje</li>
                     </ul>
-                    
-                    <p><strong>3. CUIDADOS POSTERIORES:</strong> Es fundamental seguir las instrucciones de cuidado para evitar complicaciones y obtener el mejor resultado.</p>
-                    
-                    <p><strong>4. ALTERNATIVAS:</strong> Existen alternativas como tatuajes temporales, henna, o no realizarse el tatuaje.</p>
+                    <div class="bg-red-900/20 p-4 rounded-lg">
+                        <p><strong>IMPORTANTE:</strong> Durante cuatro meses después de la aplicación de un tatuaje no podrá donar sangre.</p>
+                    </div>
+                    <div class="bg-blue-900/20 p-4 rounded-lg">
+                        <p><strong>DEBERÁ CONSULTAR CON SU MÉDICO SI DESPUÉS DE LA APLICACIÓN DE LA TÉCNICA APARECIESE CUALQUIER COMPLICACIÓN/REACCIÓN/ALTERACIÓN DE LA PIEL SIGNIFICATIVA.</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Duración y Eliminación -->
+            <div class="glass p-6 rounded-2xl mb-6">
+                <h2 class="text-xl font-semibold text-white mb-4">DURACIÓN DEL EFECTO COLORANTE Y ELIMINACIÓN DEL TATUAJE (REVERSIBILIDAD)</h2>
+                <div class="consent-text text-gray-300 space-y-4">
+                    <p>El tatuaje es una técnica <strong>PERMANENTE</strong>. El paso del tiempo puede suponer una alteración o decoloración de la zona en la que se aplicó la técnica.</p>
+                    <p>La tinta se deposita en capas profundas de la piel por lo que su posterior eliminación, mediante láser u otras técnicas, debe realizarse en centros sanitarios bajo supervisión médica.</p>
+                </div>
+            </div>
+
+            <!-- Contraindicaciones -->
+            <div class="glass p-6 rounded-2xl mb-6">
+                <h2 class="text-xl font-semibold text-white mb-4">CONTRAINDICACIONES</h2>
+                <div class="consent-text text-gray-300 space-y-4">
+                    <p>La aplicación de tatuajes tiene contraindicaciones de carácter temporal o absoluto. Consulte a su médico si tiene alguna duda.</p>
+                    <p>De manera general, <strong>NO debe realizarse técnicas de arte corporal (tatuaje) si:</strong></p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Sufre algún tipo de alergia a alguno de los productos utilizados</li>
+                        <li>Sufre algún tipo de enfermedad grave que afecte a su sistema inmunológico o hematológico</li>
+                        <li>Tiene lunares/manchas, verrugas, dermatitis, acné, psoriasis, liquen, queloides, angiomas engrosados, impétigo, urticaria, cloasma y melanomas u otro tipo de cáncer de piel</li>
+                        <li>Sufre algún tipo de enfermedad cardiaca o lleva marcapasos</li>
+                    </ul>
+                    <div class="bg-orange-900/20 p-4 rounded-lg">
+                        <p><strong>IMPORTANTE:</strong> La presencia de un tatuaje en determinadas zonas corporales, si no se encuentra cicatrizado y sano, puede resultar una contraindicación para la aplicación de determinadas técnicas anestésicas (epidural o raquianestesia) y/o exploraciones radiológicas (resonancia magnética).</p>
+                    </div>
                 </div>
             </div>
 
@@ -73,32 +191,44 @@
                     <h2 class="text-xl font-semibold text-white mb-4">DATOS DEL CLIENTE</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Apellidos y Nombre *</label>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Nombre y Apellidos *</label>
                             <input type="text" name="fullName" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">DNI/NIE/Pasaporte *</label>
-                            <input type="text" name="dni" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-300 mb-2">Fecha de nacimiento *</label>
                             <input type="date" name="birthDate" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Edad *</label>
-                            <input type="number" name="age" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <label class="block text-sm font-medium text-gray-300 mb-2">DNI *</label>
+                            <input type="text" name="dni" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-300 mb-2">Teléfono de contacto *</label>
                             <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
                         </div>
+                    </div>
+                </div>
+
+                <!-- Representante Legal -->
+                <div class="glass p-6 rounded-2xl">
+                    <h2 class="text-xl font-semibold text-white mb-4">REPRESENTANTE LEGAL</h2>
+                    <p class="text-gray-300 text-sm mb-4">(cumplimentar en caso de menores de edad no emancipados e incapaces)</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
-                            <input type="email" name="email" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Nombre y Apellidos del tutor legal</label>
+                            <input type="text" name="legalRepresentativeName" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
                         </div>
-                        <div class="md:col-span-2">
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Dirección completa *</label>
-                            <input type="text" name="address" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Fecha de nacimiento</label>
+                            <input type="date" name="legalRepresentativeBirthDate" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">DNI</label>
+                            <input type="text" name="legalRepresentativeDNI" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Teléfono de contacto</label>
+                            <input type="tel" name="legalRepresentativePhone" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
                         </div>
                     </div>
                 </div>
@@ -118,131 +248,136 @@
                     </div>
                 </div>
 
-                <!-- Información Médica -->
+                <!-- Prueba de Sensibilidad -->
                 <div class="glass p-6 rounded-2xl">
-                    <h2 class="text-xl font-semibold text-white mb-4">INFORMACIÓN MÉDICA</h2>
-                    <div class="space-y-4">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">¿Padece alguna enfermedad? (especificar)</label>
-                            <textarea name="diseases" rows="2" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Ej: Diabetes, hipertensión, etc."></textarea>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">¿Toma algún medicamento? (especificar)</label>
-                            <textarea name="medications" rows="2" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Ej: Anticoagulantes, insulina, etc."></textarea>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">¿Es alérgico a algún medicamento o sustancia? (especificar)</label>
-                            <textarea name="allergies" rows="2" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Ej: Penicilina, látex, etc."></textarea>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">¿Tiene problemas de coagulación o hemorragias?</label>
-                            <div class="flex space-x-4">
-                                <label class="flex items-center">
-                                    <input type="radio" name="bleedingProblems" value="si" class="mr-2">
-                                    <span class="text-gray-300">Sí</span>
-                                </label>
-                                <label class="flex items-center">
-                                    <input type="radio" name="bleedingProblems" value="no" class="mr-2">
-                                    <span class="text-gray-300">No</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">¿Tiene problemas de cicatrización?</label>
-                            <div class="flex space-x-4">
-                                <label class="flex items-center">
-                                    <input type="radio" name="healingProblems" value="si" class="mr-2">
-                                    <span class="text-gray-300">Sí</span>
-                                </label>
-                                <label class="flex items-center">
-                                    <input type="radio" name="healingProblems" value="no" class="mr-2">
-                                    <span class="text-gray-300">No</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">¿Tiene tatuajes previos?</label>
-                            <div class="flex space-x-4">
-                                <label class="flex items-center">
-                                    <input type="radio" name="previousTattoos" value="si" class="mr-2">
-                                    <span class="text-gray-300">Sí</span>
-                                </label>
-                                <label class="flex items-center">
-                                    <input type="radio" name="previousTattoos" value="no" class="mr-2">
-                                    <span class="text-gray-300">No</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">¿Está embarazada o en período de lactancia?</label>
-                            <div class="flex space-x-4">
-                                <label class="flex items-center">
-                                    <input type="radio" name="pregnancy" value="si" class="mr-2">
-                                    <span class="text-gray-300">Sí</span>
-                                </label>
-                                <label class="flex items-center">
-                                    <input type="radio" name="pregnancy" value="no" class="mr-2">
-                                    <span class="text-gray-300">No</span>
-                                </label>
-                                <label class="flex items-center">
-                                    <input type="radio" name="pregnancy" value="na" class="mr-2">
-                                    <span class="text-gray-300">No aplica</span>
-                                </label>
-                            </div>
-                        </div>
+                    <h2 class="text-xl font-semibold text-white mb-4">PRUEBA DE SENSIBILIDAD CUTÁNEA PREVIA AL TRATAMIENTO</h2>
+                    <div class="flex space-x-4">
+                        <label class="flex items-center">
+                            <input type="radio" name="sensitivityTest" value="si" class="mr-2">
+                            <span class="text-gray-300">SÍ</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="sensitivityTest" value="no" class="mr-2">
+                            <span class="text-gray-300">NO</span>
+                        </label>
                     </div>
                 </div>
 
-                <!-- Información del Tatuaje -->
+                <!-- Información del Tatuaje - Aplicador -->
                 <div class="glass p-6 rounded-2xl">
-                    <h2 class="text-xl font-semibold text-white mb-4">INFORMACIÓN DEL TATUAJE</h2>
+                    <h2 class="text-xl font-semibold text-white mb-4">ES OBLIGATORIO QUE EL/LA APLICADOR/A RELLENE ESTE APARTADO</h2>
                     <div class="space-y-4">
                         <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Descripción del tatuaje a realizar *</label>
-                            <textarea name="tattooDescription" required rows="3" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Describa el diseño, tamaño, ubicación, colores, etc."></textarea>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Ubicación en el cuerpo *</label>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">LOCALIZACIÓN ANATÓMICA TATUAJE *</label>
                             <input type="text" name="tattooLocation" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Ej: Brazo derecho, espalda, etc.">
                         </div>
+                        
                         <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Tamaño aproximado (cm) *</label>
-                            <input type="text" name="tattooSize" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Ej: 10x15 cm">
+                            <h3 class="text-lg font-medium text-white mb-3">TINTAS EMPLEADAS</h3>
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-300 mb-2">Nº AEMPS</label>
+                                        <input type="text" name="ink1_aemps" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-300 mb-2">LOTE</label>
+                                        <input type="text" name="ink1_lote" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-300 mb-2">COLOR</label>
+                                        <input type="text" name="ink1_color" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-300 mb-2">FECHA CAD</label>
+                                        <input type="date" name="ink1_cad" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                    </div>
+                                </div>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-300 mb-2">Nº AEMPS</label>
+                                        <input type="text" name="ink2_aemps" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-300 mb-2">LOTE</label>
+                                        <input type="text" name="ink2_lote" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-300 mb-2">COLOR</label>
+                                        <input type="text" name="ink2_color" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-300 mb-2">FECHA CAD</label>
+                                        <input type="date" name="ink2_cad" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                    </div>
+                                </div>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-300 mb-2">Nº AEMPS</label>
+                                        <input type="text" name="ink3_aemps" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-300 mb-2">LOTE</label>
+                                        <input type="text" name="ink3_lote" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-300 mb-2">COLOR</label>
+                                        <input type="text" name="ink3_color" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-300 mb-2">FECHA CAD</label>
+                                        <input type="date" name="ink3_cad" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Declaración de Consentimiento -->
                 <div class="glass p-6 rounded-2xl">
-                    <h2 class="text-xl font-semibold text-white mb-4">DECLARACIÓN DE CONSENTIMIENTO</h2>
+                    <h2 class="text-xl font-semibold text-white mb-4">DECLARACIÓN Y REVOCACIÓN DE ESTE CONSENTIMIENTO INFORMADO (CLIENTE/REPRESENTANTE LEGAL)</h2>
                     <div class="consent-text text-gray-300 space-y-4">
-                        <p>He leído y comprendido la información proporcionada sobre el procedimiento de tatuaje, sus riesgos, complicaciones y cuidados posteriores.</p>
+                        <p>Este documento es suscrito para que la persona usuaria o quien represente a la misma, preste su consentimiento para ser sometida a la siguiente técnica de decoración corporal.</p>
                         
-                        <p>Declaro que:</p>
-                        <ul class="list-disc list-inside ml-4 space-y-2">
-                            <li>He proporcionado información veraz sobre mi estado de salud</li>
-                            <li>No padezco ninguna contraindicación médica para la realización del tatuaje</li>
-                            <li>Comprendo que el tatuaje es permanente y que su eliminación puede ser costosa y dolorosa</li>
-                            <li>He sido informado de los cuidados posteriores necesarios</li>
-                            <li>Comprendo que pueden surgir complicaciones a pesar de seguir todas las precauciones</li>
-                        </ul>
+                        <p>Yo, D/DÑA <input type="text" name="clientName" required class="inline-block w-64 px-2 py-1 mx-2 rounded bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Nombre completo"> manifiesto que he sido informado/a de forma satisfactoria, qué es y cómo se realiza el procedimiento. También se me ha informado los riesgos existentes, las posibles molestias y/o complicaciones de dicho procedimiento.</p>
                         
-                        <div class="mt-6">
-                            <label class="flex items-start space-x-3">
-                                <input type="checkbox" name="consentGiven" required class="mt-1">
-                                <span class="text-gray-300">Doy mi consentimiento informado para la realización del tatuaje descrito, habiendo sido informado de todos los aspectos del procedimiento.</span>
-                            </label>
+                        <p>He comprendido perfectamente todo lo anterior, he podido aclarar todas las dudas planteadas y doy</p>
+                        
+                        <div class="text-center my-6">
+                            <div class="bg-purple-900/30 p-4 rounded-lg border-2 border-purple-500">
+                                <p class="text-xl font-bold text-purple-300">CONSENTIMIENTO PARA LA APLICACIÓN DE LA TÉCNICA CITADA</p>
+                            </div>
+                        </div>
+                        
+                        <p>Se me ha notificado que tengo derecho a revocar el presente documento en cualquier momento, sin necesidad de expresar motivación alguna.</p>
+                    </div>
+                </div>
+
+                <!-- Fecha y Lugar -->
+                <div class="glass p-6 rounded-2xl">
+                    <h2 class="text-xl font-semibold text-white mb-4">FECHA Y LUGAR</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Lugar *</label>
+                            <input type="text" name="place" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Ciudad">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Fecha *</label>
+                            <input type="date" name="signatureDate" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
                         </div>
                     </div>
                 </div>
 
                 <!-- Firmas -->
                 <div class="glass p-6 rounded-2xl">
-                    <h2 class="text-xl font-semibold text-white mb-4">FIRMAS</h2>
-                    <div class="space-y-6">
+                    <h2 class="text-xl font-semibold text-white mb-4">FECHA Y FIRMA</h2>
+                    <div class="space-y-8">
                         <!-- Firma del Cliente -->
                         <div>
-                            <h3 class="text-lg font-medium text-white mb-3">Firma del Cliente</h3>
+                            <h3 class="text-lg font-medium text-white mb-3">FIRMA DEL CLIENTE/REPRESENTANTE LEGAL</h3>
                             <canvas id="signatureCanvas" width="100%" height="200"></canvas>
                             <div class="flex gap-2 mt-2">
                                 <button type="button" id="clear-signature" class="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors">Limpiar Firma</button>
@@ -250,16 +385,37 @@
                             </div>
                         </div>
                         
-                        <!-- Información del Tatuador -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-300 mb-2">Nombre del Tatuador *</label>
-                                <input type="text" name="tattooArtist" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        <!-- Firma del Aplicador -->
+                        <div>
+                            <h3 class="text-lg font-medium text-white mb-3">FIRMA DEL/DE LA APLICADOR/A</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-300 mb-2">Nombre del Aplicador *</label>
+                                    <input type="text" name="applicatorSignatureName" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-300 mb-2">DNI *</label>
+                                    <input type="text" name="applicatorSignatureDNI" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                </div>
                             </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-300 mb-2">Número de Colegiado/Registro *</label>
-                                <input type="text" name="artistLicense" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
-                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Protección de Datos -->
+                <div class="glass p-6 rounded-2xl">
+                    <h2 class="text-xl font-semibold text-white mb-4">PROTECCIÓN DE DATOS</h2>
+                    <div class="consent-text text-gray-300 space-y-4">
+                        <p><strong>Responsable de tratamiento:</strong> [Incluir nombre del profesional o denominación social del responsable, NIF y domicilio social].</p>
+                        <p><strong>Contacto DPD:</strong> [en caso de que se disponga de DPD, identificar medio de contacto].</p>
+                        <p><strong>Finalidad:</strong> gestión de la relación contractual y cumplimiento de obligación legal de aplicación al responsable.</p>
+                        <p><strong>Legitimación:</strong> art. 6.1. b) y c) RGPD.</p>
+                        <p><strong>Conservación:</strong> con carácter general, los datos se conservarán durante el tiempo que resulte necesario en cumplimiento de los distintos plazos de prescripción que resulten de aplicación.</p>
+                        <p><strong>Destinatarios:</strong> no se prevé salvo que se requiera en atención a cumplimiento de una obligación legal.</p>
+                        <p><strong>Ejercicio de derechos:</strong> el interesado puede ejercitar los derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad, cuando sean aplicables, mediante comunicación escrita en la que concrete su solicitud dirigida al domicilio del responsable/ mediante correo electrónico dirigido a: [identificar dirección de correo electrónico si se habilita este medio] acompañando su DNI o documento equivalente.</p>
+                        <p>Le informamos de la posibilidad de presentar una reclamación ante la Autoridad de Control (Agencia Española de Protección de Datos - www.aepd.es).</p>
+                        <div class="bg-blue-900/20 p-4 rounded-lg">
+                            <p class="text-center font-semibold">UNA COPIA ES PARA EL ESTABLECIMIENTO Y OTRA PARA EL CLIENTE</p>
                         </div>
                     </div>
                 </div>
@@ -345,10 +501,10 @@
         // Update submit button state
         function updateSubmitButton() {
             const submitBtn = document.getElementById('submit-btn');
-            const consentCheckbox = document.querySelector('input[name="consentGiven"]');
-            const isConsentChecked = consentCheckbox ? consentCheckbox.checked : false;
+            const clientName = document.querySelector('input[name="clientName"]');
+            const isClientNameFilled = clientName ? clientName.value.trim() !== '' : false;
             
-            if (signature && isConsentChecked) {
+            if (signature && isClientNameFilled) {
                 submitBtn.className = 'w-full px-8 py-4 rounded-lg font-semibold text-lg transition-colors bg-purple-600 hover:bg-purple-700 text-white';
                 submitBtn.disabled = false;
             } else {
@@ -357,11 +513,11 @@
             }
         }
 
-        // Add event listener for consent checkbox
-        function initConsentCheckbox() {
-            const consentCheckbox = document.querySelector('input[name="consentGiven"]');
-            if (consentCheckbox) {
-                consentCheckbox.addEventListener('change', updateSubmitButton);
+        // Add event listener for client name field
+        function initClientNameField() {
+            const clientNameField = document.querySelector('input[name="clientName"]');
+            if (clientNameField) {
+                clientNameField.addEventListener('input', updateSubmitButton);
             }
         }
 
@@ -461,7 +617,7 @@
             setCurrentDate();
             initSignature();
             calculateAge();
-            initConsentCheckbox();
+            initClientNameField();
             document.getElementById('consent-form').addEventListener('submit', handleSubmit);
         });
     </script>
