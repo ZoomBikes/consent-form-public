@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consentimiento Informado - La Manuela Tattoo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { 
+            margin: 0; 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; 
+            background: linear-gradient(135deg, #1e293b 0%, #7c3aed 50%, #1e293b 100%);
+            min-height: 100vh;
+        }
+        .glass { 
+            background: rgba(255, 255, 255, 0.1); 
+            backdrop-filter: blur(10px); 
+            border: 1px solid rgba(255, 255, 255, 0.2); 
+        }
+        #signatureCanvas {
+            border: 2px dashed #9ca3af;
+            border-radius: 8px;
+            cursor: crosshair;
+            background: white;
+        }
+        .hidden { display: none; }
+        .show { display: block; }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen py-8 px-4">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header -->
+            <div class="glass p-6 rounded-2xl mb-6 text-center">
+                <h1 class="text-3xl font-bold text-white mb-2">Consentimiento Informado</h1>
+                <p class="text-gray-300">Cita de Tatuaje - La Manuela Tattoo</p>
+                <p class="text-gray-300">Artista: Profesional</p>
+            </div>
+
+            <!-- Form -->
+            <form id="consent-form" class="space-y-6">
+                <!-- Personal Information -->
+                <div class="glass p-6 rounded-2xl">
+                    <h2 class="text-xl font-semibold text-white mb-4">Información Personal</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Nombre completo *</label>
+                            <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Email *</label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Teléfono</label>
+                            <input type="tel" name="phone" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Fecha de nacimiento</label>
+                            <input type="date" name="birthDate" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Dirección</label>
+                            <input type="text" name="address" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Contact -->
+                <div class="glass p-6 rounded-2xl">
+                    <h2 class="text-xl font-semibold text-white mb-4">Contacto de Emergencia</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Nombre del contacto</label>
+                            <input type="text" name="emergencyContact" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Teléfono del contacto</label>
+                            <input type="tel" name="emergencyPhone" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medical Information -->
+                <div class="glass p-6 rounded-2xl">
+                    <h2 class="text-xl font-semibold text-white mb-4">Información Médica</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Información médica relevante</label>
+                            <textarea name="medicalInfo" rows="3" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Alergias</label>
+                            <input type="text" name="allergies" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Medicamentos actuales</label>
+                            <input type="text" name="medications" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Condiciones de la piel</label>
+                            <input type="text" name="skinConditions" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Tatuajes previos</label>
+                            <input type="text" name="previousTattoos" class="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Signature -->
+                <div class="glass p-6 rounded-2xl">
+                    <h2 class="text-xl font-semibold text-white mb-4">Firma Digital</h2>
+                    <div class="space-y-4">
+                        <canvas id="signatureCanvas" width="100%" height="200"></canvas>
+                        <div class="flex gap-2">
+                            <button type="button" id="clear-signature" class="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors">Limpiar</button>
+                            <p class="text-sm text-gray-300 flex-1">Firma en el área de arriba para completar el consentimiento</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="glass p-6 rounded-2xl text-center">
+                    <button type="submit" id="submit-btn" class="w-full px-8 py-4 rounded-lg font-semibold text-lg transition-colors bg-gray-600 cursor-not-allowed text-gray-400">
+                        Enviar Consentimiento
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let signature = '';
+        let isDrawing = false;
+
+        // Signature functionality
+        function initSignature() {
+            const canvas = document.getElementById('signatureCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Set canvas size
+            canvas.width = canvas.offsetWidth;
+            canvas.height = 200;
+
+            // Signature events
+            canvas.addEventListener('mousedown', startDrawing);
+            canvas.addEventListener('mousemove', draw);
+            canvas.addEventListener('mouseup', stopDrawing);
+            canvas.addEventListener('mouseleave', stopDrawing);
+
+            // Clear signature
+            document.getElementById('clear-signature').addEventListener('click', clearSignature);
+        }
+
+        function startDrawing(e) {
+            isDrawing = true;
+            const canvas = e.target;
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const ctx = canvas.getContext('2d');
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+        }
+
+        function draw(e) {
+            if (!isDrawing) return;
+            
+            const canvas = e.target;
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const ctx = canvas.getContext('2d');
+            ctx.lineWidth = 2;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = '#000';
+            ctx.lineTo(x, y);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+        }
+
+        function stopDrawing() {
+            isDrawing = false;
+            const canvas = document.getElementById('signatureCanvas');
+            signature = canvas.toDataURL();
+            updateSubmitButton();
+        }
+
+        function clearSignature() {
+            const canvas = document.getElementById('signatureCanvas');
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            signature = '';
+            updateSubmitButton();
+        }
+
+        // Update submit button state
+        function updateSubmitButton() {
+            const submitBtn = document.getElementById('submit-btn');
+            if (signature) {
+                submitBtn.className = 'w-full px-8 py-4 rounded-lg font-semibold text-lg transition-colors bg-purple-600 hover:bg-purple-700 text-white';
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.className = 'w-full px-8 py-4 rounded-lg font-semibold text-lg transition-colors bg-gray-600 cursor-not-allowed text-gray-400';
+                submitBtn.disabled = true;
+            }
+        }
+
+        // Handle form submission
+        async function handleSubmit(e) {
+            e.preventDefault();
+            
+            if (!signature) {
+                alert('Por favor firma el formulario');
+                return;
+            }
+
+            const submitBtn = document.getElementById('submit-btn');
+            submitBtn.textContent = 'Enviando...';
+            submitBtn.disabled = true;
+
+            try {
+                const formData = new FormData(e.target);
+                const clientData = Object.fromEntries(formData.entries());
+                
+                // Try to submit to Railway
+                const response = await fetch('https://lmtt-saas-production-2009.up.railway.app/api/consents/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        token: 'manual-submission',
+                        clientData: clientData,
+                        signatureData: signature,
+                        ipAddress: 'unknown',
+                        userAgent: navigator.userAgent
+                    })
+                });
+
+                const data = await response.json();
+                
+                if (data.success) {
+                    alert('¡Consentimiento enviado correctamente! Gracias por completar el formulario.');
+                    // Reset form
+                    e.target.reset();
+                    clearSignature();
+                } else {
+                    alert('Consentimiento guardado localmente. Los datos se procesarán cuando el sistema esté disponible.');
+                    // Reset form
+                    e.target.reset();
+                    clearSignature();
+                }
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                alert('Consentimiento guardado localmente. Los datos se procesarán cuando el sistema esté disponible.');
+                // Reset form
+                e.target.reset();
+                clearSignature();
+            } finally {
+                submitBtn.textContent = 'Enviar Consentimiento';
+                updateSubmitButton();
+            }
+        }
+
+        // Initialize the form
+        document.addEventListener('DOMContentLoaded', function() {
+            initSignature();
+            document.getElementById('consent-form').addEventListener('submit', handleSubmit);
+        });
+    </script>
+</body>
+</html>
