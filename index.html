@@ -23,6 +23,20 @@
             cursor: crosshair;
             background: white;
         }
+        .accordion-content {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.3s ease;
+        }
+        .accordion-open .accordion-content {
+            max-height: 2000px; /* large enough to accommodate content */
+        }
+        .accordion-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -72,6 +86,44 @@
                     <div class="flex gap-2 mt-2">
                         <button type="button" id="clear-signature" class="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors">Limpiar firma</button>
                         <p class="text-sm text-gray-300 flex-1">Firme en el área de arriba para completar el consentimiento</p>
+                    </div>
+                </div>
+
+                <!-- Descripción de la técnica (colapsable) -->
+                <div class="glass p-6 rounded-2xl">
+                    <button type="button" class="accordion-btn text-left text-xl font-semibold text-white mb-2" data-accordion="technique">
+                        Descripción de la técnica
+                        <span class="text-gray-300 text-sm" id="chevron-technique">▼</span>
+                    </button>
+                    <div class="accordion-content" id="content-technique">
+                        <div class="consent-text text-gray-300 space-y-6 pt-2">
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Tatuaje</h3>
+                                <p>Esta técnica es el procedimiento de decoración corporal mediante la introducción en la piel de pigmentos colorantes por medio de punciones. Realizado con útiles de acero inoxidable, agujas, porta tintas y demás material, estéril y desechable, envasado y sellado hasta su uso. Las tintas utilizadas dan cumplimiento a lo establecido en la Disposición Adicional Segunda del Real Decreto 1599/1997, sobre Productos Cosméticos, y disponen de su correspondiente registro sanitario de la Agencia Española de Medicamentos y Productos Sanitarios.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Anillado</h3>
+                                <p>Procedimiento de decoración corporal que consiste en la perforación de cualquier parte del cuerpo con la finalidad de introducir en el mismo un objeto de algún material. Realizado con pinzas, aguja americana de un solo uso, joyería de Titanio grado implante F136, oro de 14 quilates. Todos los materiales son envasados individualmente y esterilizados hasta su utilización para reducir el riesgo de infección o reacción alérgica.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Riesgos</h3>
+                                <p>Siempre que se practiquen cortes o punciones que conlleven una herida abierta y sangrante, existen riesgos de infecciones locales, reacciones adversas de la piel tales como alergias, queloides, sarpullidos y contagio de enfermedades tales como hepatitis, sífilis, VIH, entre otras. Estas son de fácil prevención manteniendo las reglas de higiene y esterilización.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Protección de datos y consentimiento (colapsable) -->
+                <div class="glass p-6 rounded-2xl">
+                    <button type="button" class="accordion-btn text-left text-xl font-semibold text-white mb-2" data-accordion="privacy">
+                        Protección de datos y consentimiento
+                        <span class="text-gray-300 text-sm" id="chevron-privacy">▼</span>
+                    </button>
+                    <div class="accordion-content" id="content-privacy">
+                        <div class="consent-text text-gray-300 space-y-4 pt-2">
+                            <p>De acuerdo con el Reglamento (UE) 2016/679 General de Protección de Datos (RGPD) y la Ley Orgánica 3/2018, sus datos personales serán tratados por <strong>La Manuela Tattoo</strong> para gestionar su consentimiento informado y el archivo del mismo conforme a la normativa vigente. Podrá ejercer sus derechos acompañando copia de su documento de identidad.</p>
+                            <p>Mediante el envío, declara haber leído y comprendido toda la información facilitada, así como prestar su consentimiento expreso para el tratamiento de sus datos personales en los términos indicados.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -186,6 +238,22 @@
                 });
         }
 
+        function initAccordions() {
+            const map = [
+                { key: 'technique', btn: document.querySelector('[data-accordion="technique"]'), content: document.getElementById('content-technique'), chev: document.getElementById('chevron-technique') },
+                { key: 'privacy', btn: document.querySelector('[data-accordion="privacy"]'), content: document.getElementById('content-privacy'), chev: document.getElementById('chevron-privacy') },
+            ];
+            map.forEach(({ btn, content, chev }) => {
+                if (!btn || !content) return;
+                btn.addEventListener('click', () => {
+                    const container = btn.parentElement;
+                    if (!container) return;
+                    const isOpen = container.classList.toggle('accordion-open');
+                    if (chev) chev.textContent = isOpen ? '▲' : '▼';
+                });
+            });
+        }
+
         async function handleSubmit(e) {
             e.preventDefault();
             if (!signature) {
@@ -234,6 +302,7 @@
             setCurrentDate();
             initSignature();
             initRequiredFields();
+            initAccordions();
             document.getElementById('consent-form').addEventListener('submit', handleSubmit);
         });
     </script>
